@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shoe-store</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .header{
+                display: grid;
+                grid-template-columns: 2fr 7fr 3fr;
+                height: 130px;
+                background-color: rgb(8, 247, 235);
+                border-bottom: 2px solid red;
+            }
+            .header-name{
+                /*border: 2px solid black;*/
+                text-align: center;
+                padding-top: 10px;
+            }
+            /*.header-logo{
+                border: 2px solid black;
+            }*/
+            .header-user{
+               /* border: 2px solid black;*/
+                text-align: center;
+                padding-top: 30px;
+            }
+            .main{
+                display: grid;
+                grid-template-columns: 2fr 10fr;
+                height: 100px;
+                overflow: auto;
+            }
+            button{
+               /* border: 2px rgb(230, 14, 50) solid;*/
+                padding: 10px;
+                margin: 5px;
+                width: 100px;
+                background-color: pink;
+                color: purple;
+            }
+            button:hover{
+                background-color: black;
+                color: white;
+                /*cursor:grab;*/
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                margin-left: 50px;
+            }
+            li{
+                margin-left: 70px;
+                margin-bottom: 0px;
+                border: 2px solid blue;
+                background-color: rgb(61, 105, 224);
+                width: 100px;
+                height: 20px;
+                color: white;
+            }
+            .nav{
+                /*border: black 2px solid;*/ 
+                width: 100%;
+            }
+            .main{
+                height: 600px;
+                width: 100%;
+            }
+            .main-nav{
+                height: 600px;
+                /*border: 2px solid black;*/
+                overflow: scroll;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            .shoe>div{
+                height: 400px;
+                width: 200px;
+                /*border: 2px solid blue;*/
+                text-align: center;
+                margin: 30px;
+                padding: 5px;
+            }
+            .shoe{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .footer{
+                display: grid;
+                grid-template-columns: 4fr 4fr 4fr;
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-logo">
+                <img src="../image/shoe-logo-1" height="100%" width="110px" alt="Shoe-logo">
+            </div>
+            <div class="header-name">
+                <div><font color="red" size="7">Shoe Store</font></div>
+                <div class="nav" align="center">
+                    <nav>
+                        <ul>
+                            <li>Casual-shoe</li>
+                            <li>Sport-shoe</li>
+                            <li>Formal-shoe</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-user" align="right">
+                <button><a href="login-page.html">Login</a></button>
+                <button><a href="register.html">Register</a></button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-nav">
+                <div align="center"><font size="5" color="black">Filter</font></div>
+                <div>
+                    <label><font size="5" color="red">Chose</font></label>
+                    <div><input type="checkbox">MEN</div>
+                    <div><input type="checkbox">WOMEN</div>
+                    <div><input type="checkbox">CHILD</div>
+                </div>
+                <div>
+                    <label><font size="5" color="red">Price-range</font></label>
+                    <div><input type="range" max="100000" min="500" step="100"></div>
+                </div>
+                <div>
+                    <label><font size="5" color="red">Delivery-option</font></label>
+                    <div>
+                        <div><input type="text" list="del" placeholder="Select your city"></div>
+                        <datalist id="del">
+                            <option>PATNA</option>
+                            <option>WEST-BANGEL</option>
+                            <option>HYDERABAD</option>
+                            <option>DELHI</option>
+                            <option>CHENNI</option>
+                            <option>ASAM</option>
+                            <option>UTTER-PRADESH</option>
+                            <option>MADHYA-PRADESH</option>
+                        </datalist>
+                    </div>
+                </div>
+                <div>
+                    <label><font size="5" color="red">Availability</font></label>
+                    <div><input type="radio" name="avl">Stock</div>
+                    <div><input type="radio" name="avl">Out-of-stock</div>
+                </div>
+                    <div>
+                        <label><font size="5" color="red">COLOR</font></label>
+                        <div><input type="checkbox">Red</div>
+                        <div><input type="checkbox">Black</div>
+                        <div><input type="checkbox">Blue</div>
+                        <div><input type="checkbox">Yellow</div>
+                        <div><input type="checkbox">Green</div>
+                        <div><input type="checkbox">Black</div>
+                    </div>
+                <div>
+                    <label><font size="5" color="red">Brand</font></label>
+                    <div><input type="checkbox">Woodland</div>
+                    <div><input type="checkbox">Campus</div>
+                    <div><input type="checkbox">Sparx</div>
+                    <div><input type="checkbox">Lee</div>
+                    <div><input type="checkbox">Lee-copper</div>
+                    <div><input type="checkbox">Fila</div>
+                    <div><input type="checkbox">Eather</div>
+                    <div><input type="checkbox">Red-Tap</div>
+                    <div><input type="checkbox">Puma</div>
+                    <div><input type="checkbox">Power</div>
+                    <div><input type="checkbox">Bata</div>
+                </div>
+                <div>
+                    <label><font color="red" size="5">Size</font></label><br>
+                    <span><input type="radio" name="size">UK-6</span>
+                    <span><input type="radio" name="size">UK-8</span>
+                    <span><input type="radio" name="size">UK-10</span>
+                </div>
+            </div>
+            <div class="main-body">
+                <div class="shoe">
+                    <div>
+                        <font size="4" color="black">Shoe-1</font><br>
+                        <img src="../image/sh-1.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-2</font><br>
+                        <img src="../image/sh-2.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-3</font><br>
+                        <img src="../image/sh-3.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-4</font><br>
+                        <img src="../image/sh-4.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-5</font><br>
+                        <img src="../image/sh-5.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-6</font><br>
+                        <img src="../image/sh-6.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-7</font><br>
+                        <img src="../image/sh-7.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-8</font><br>
+                        <img src="../image/sh-8.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-9</font><br>
+                        <img src="../image/sh-9.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-10</font><br>
+                        <img src="../image/sh-10.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-11</font><br>
+                        <img src="../image/sh-11.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-12</font><br>
+                        <img src="../image/sh-12.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-13</font><br>
+                        <img src="../image/sh-13.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-14</font><br>
+                        <img src="../image/sh-14.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-15</font><br>
+                        <img src="../image/sh-15.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-16</font><br>
+                        <img src="../image/sh-16.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-17</font><br>
+                        <img src="../image/sh-17.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-18</font><br>
+                        <img src="../image/sh-18.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-19</font><br>
+                        <img src="../image/sh-19.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                    <div>
+                        <font size="4" color="black">Shoe-20</font><br>
+                        <img src="../image/sh-20.jpeg" height="200" width="200"><br>
+                        <h4>&#8377;599</h4><br>
+                            <button><font color="green">Buy</font></button>
+                            <button><font color="green">Add to cart</font></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="col-1">
+                <dl>
+                    <dt>Contact us</dt>
+                    <dd>Mob: +9876543290</dd>
+                    <dd>Email: shoestore@info.com</dd>
+                </dl>
+            </div>
+            <div class="col-2">
+                <div align="center">&copy;copyright-2021</div>
+            </div>
+            <div class="col-3">
+                <dl>
+                    <dt>Address</dt>
+                    <dd>Khudi-ram nager,haldia</dd>
+                    <dd>Dist-Purba Mednipur,711657</dd>
+                </dl>
+            </div>
+            
+        </div>
+    </body>
+</html>

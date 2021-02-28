@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login-page</title>
+        <style>
+            .login{
+                border: rgb(38, 30, 49) 5px solid;
+                height: 600px;
+                width: 400px;
+                margin: auto;
+                box-shadow: 5px 5px 20px gray;
+                background-color: rgba(69, 193, 209, 0.8);
+                padding: 20px;
+                margin-top: 20px;
+            }
+            .login>div{
+                padding: 20px;
+            }
+            input{
+                width: 100%;
+                height: 30px;
+            }
+            button{
+                width: 100%;
+                height: 30px;
+            }
+            body{
+                background-image: url(../image/nike.jpg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            a{
+                text-decoration: none;
+                color: rgb(11, 7, 223);
+            }
+            a:hover{
+                color: red;
+            }
+            .home{
+                width: 50px;
+                height: 20px;
+                border: 2px blue solid;
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home"><a href="shoe-store.html">HOME</a></div>
+        <form action="">
+            <div class="login">
+                <div>
+                    <label><font color="black" size="4">User-Name</font></label><br>
+                    <input type="text">
+                </div>
+                <div>
+                    <label><font size="4">Password</font></label><br>
+                    <input type="password">
+                </div>
+                <div align="center">
+                    <button><font size="4">Log-in</font></button>
+                </div>
+                <div align="center">
+                    <font size="4"><p>If you don't have accout <a href="register.html"> CLICK HERE </a>to register</p></font>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
